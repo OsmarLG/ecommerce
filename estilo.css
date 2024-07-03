@@ -28,6 +28,7 @@ span {
 /*Estilo de navegacion*/
 
 nav {
+    position: fixed;
     width: 100%;
     background-color: #fff;
     display: flex;
@@ -150,6 +151,12 @@ nav .fa-shopping-cart:hover {
 }
 
 #characteristic  .fea-box h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #494b5f;
+}
+
+#characteristic .fea-box p {
     font-size: 1rem;
     font-weight: 400;
     color: #494b5f;
