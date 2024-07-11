@@ -37,6 +37,7 @@ nav {
     padding: 1vw 8vw;
     box-shadow: 2px 2px 10px rgba(0,0,0, 0.15);
     align-items: center;
+    z-index: 999;
 }
 
 nav img {
@@ -178,14 +179,14 @@ nav .fa-shopping-cart:hover {
     margin-top: 50px;
 }
 
-#features  .products {
+#features .products-box .products {
     position: relative;
     text-align: start;
     background-color: #f9f9ff;
     height: 100%;
 }
 
-#features  .products  img {
+#features .products-box .products  img {
     width: 100%;
     height: 60%;
     background-size: cover;
