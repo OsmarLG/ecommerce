@@ -1,8 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
     const mostrarProductos = document.getElementById("products-box")
 
-    let carritoDeCompra = [];
-
     productos.forEach(producto => {
         const crearDiv = document.createElement("div");
         crearDiv.classList.add("products");
@@ -32,36 +30,5 @@ document.addEventListener("DOMContentLoaded", () => {
         mostrarProductos.appendChild(crearDiv)
     });
 
-    const botonesComprar = document.querySelectorAll(".add-to-cart");
-    botonesComprar.forEach(boton => {
-        boton.addEventListener("click", (e) => {
-             const productoId = e.target.getAttribute("data-id");
-             const productoImage = e.target.getAttribute("data-image");
-             const productoNombre = e.target.getAttribute("data-nombre");
-             const productoPrecio = e.target.getAttribute("data-precio")
-            
-             const productoExistente = carritoDeCompra.find(item => 
-              item.id === productoId
-             )
-
-             if (productoExistente) {
-                productoExistente.cantidad++
-             } else {
-                const nuevoProducto = {
-                    id:productoId, 
-                    nombre: productoNombre,
-                    image: productoImage,
-                    precio: productoPrecio,
-                    cantidad: 1
-                 };
-                 carritoDeCompra = [...carritoDeCompra, nuevoProducto]
-             }
-
-             console.log(carritoDeCompra)
-        })
-    })
-
-
-
-
+    
 })
