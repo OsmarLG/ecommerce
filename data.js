@@ -43,7 +43,7 @@ const productos = [
         id:5,
         image: "images/p5.jpg",
         categoria: "Caballeros",
-        nombre: "Zapatos para hombres",
+        nombre: "Zapatos",
         estrellas: 5,
         opinion: 250,
         precio: 50
@@ -53,7 +53,7 @@ const productos = [
         id:6,
         image: "images/p6.jpg",
         categoria: "Caballeros",
-        nombre: "Camisas para hombres",
+        nombre: "Camisas",
         estrellas: 5,
         opinion: 250,
         precio: 50

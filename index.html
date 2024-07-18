@@ -6,6 +6,7 @@
     <title>Ecommerce</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
     <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="responsive.css">
     <script src="data.js"></script>
     <script src="script.js"></script>
 </head>
@@ -17,8 +18,28 @@
             <li><a href="#">Catálogo</a></li>
             <li><a href="#">Contacto</a></li>
         </ul>
-        <i class="fas fa-shopping-cart"></i>
+
+    
+            <i class="fas fa-shopping-cart"></i>
+
+
     </nav>
+
+    <div class="hidden" id="cart-dropdown">
+        <div id="cart-total">
+            <p>Total: $ <span id="total-amount">0.00</span></p>
+        </div>
+        <hr>
+
+        <dir id="cart">
+            <div class="cart-item">
+
+            </div>
+
+        </dir>
+
+    </div>
+
 
 
 
@@ -150,5 +171,6 @@
 
 
         </section>
+
 </body>
 </html>

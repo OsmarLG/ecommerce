@@ -28,6 +28,7 @@ span {
 /*Estilo de navegacion*/
 
 nav {
+    position: fixed;
     width: 100%;
     background-color: #fff;
     display: flex;
@@ -36,6 +37,7 @@ nav {
     padding: 1vw 8vw;
     box-shadow: 2px 2px 10px rgba(0,0,0, 0.15);
     align-items: center;
+    z-index: 999;
 }
 
 nav img {
@@ -80,8 +82,84 @@ nav .fa-shopping-cart:hover {
  color: #e55b4f;
 }
 
-/*estilo para el carrito */
 
+/*estilo para el boton cart*/
+ 
+/*estilo para el carrito */
+ 
+
+#cart-dropdown {
+    position: fixed;
+    top: 75px;
+    right: 30px;
+    background-color: #fdfdfd;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+    z-index: 999;
+}
+
+#cart-total {
+    text-align: right;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 10px 0;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    justify-content: center;
+}
+
+.cart-item img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.cart-item  .info {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.cart-item  .info p {
+    font-size: 0.8rem;
+}
+
+.cart-item  .info div {
+    display: flex;
+    align-items: center;
+}
+.cart-item  .info div span {
+    margin: 0 5px;
+}
+
+.cart-item  .info  button {
+    display: inline-block;
+    width: 25px; 
+    height: 25px;
+    text-align: center;
+    line-height: 25px;
+    border: 1px solid #000;
+    cursor: pointer;
+    font-size: 1rem;
+    margin: 0 5px;
+}
+
+.cart-item  .info  button:hover {
+    background-color: #f0f0f0;
+}
+
+.cart-item  .info  button  i {
+    font-size: 1rem;
+    color: #4e538d;
+}
 
 
 /*estilo para el home*/
