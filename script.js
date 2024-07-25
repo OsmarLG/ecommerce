@@ -42,55 +42,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
         mostrarTotalDelProducto.textContent = total.toFixed(2);
         contadorCarrito.textContent = cantidadTotal;
-        configurarEventos()
+
+        //llamar la funcion configurarEventos
+        
     };
 
 //funcion para los botones 
-  const configurarEventos = () => {
-    document.querySelectorAll(".increase-quantity").forEach(button => {
-        button.addEventListener("click" ,  () => {
-            const idboton = parseInt(button.getAttribute("data-id"));
-            carritoDeCompra = carritoDeCompra.map( producto=> {
-                if(producto.id === idboton) {
-                    return {
-                        ...producto,
-                        cantidad : producto.cantidad + 1
-                    }
-                }
-                return producto;
-            });
-            actualizarCarrito();
-        })
-    } )
 
-    document.querySelectorAll(".decrease-quantity").forEach(button => {
-        button.addEventListener("click", () => {
-            const disminuirProducto = parseInt(button.getAttribute("data-id"));
-            carritoDeCompra = carritoDeCompra.map(producto => {
-                if (producto.id === disminuirProducto && producto.cantidad > 1) {
-                    return {
-                        ...producto,
-                        cantidad: producto.cantidad - 1
-                    }
-                }
-                return producto;
-            });
-            actualizarCarrito();
-        })
-    });
-
-
-    document.querySelectorAll(".remove-item").forEach(button => {
-        button.addEventListener("click", () => {
-            const eliminarProducto = parseInt(button.getAttribute("data-id"));
-            carritoDeCompra = carritoDeCompra
-            .filter(producto => producto.id !== eliminarProducto
-            );
-            actualizarCarrito()
-        })
-    })
-
-  }
 
   
     //funcion para mostrar los productos
