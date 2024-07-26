@@ -3,8 +3,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const mostrarProductoAlCarrito = document.getElementById("cart");
     const mostrarTotalDelProducto = document.getElementById("total-amount");
     const contadorCarrito = document.getElementById("cart-counter")
-
-
     const carritoDropdown = document.getElementById("cart-dropdown")
     const carritoIcon = document.querySelector(".cart-icon-container")
     
@@ -44,13 +42,58 @@ document.addEventListener("DOMContentLoaded", () => {
         contadorCarrito.textContent = cantidadTotal;
 
         //llamar la funcion configurarEventos
-        
+        configurarEventos();
     };
 
 //funcion para los botones 
+    const configurarEventos = () => {
+        document.querySelectorAll(".increase-quantity").forEach(button => {
+            button.addEventListener("click", () => {
+                 const idboton = parseInt(button.getAttribute("data-id"))
+                 carritoDeCompra = carritoDeCompra.map(producto => {
+                    if (producto.id === idboton) {
+                        return {
+                            ...producto,
+                            cantidad: producto.cantidad + 1
+                        };
+                    }
+                    return producto;
+                 });
+                 actualizarCarrito();
+            })
+        })
+
+        //funcion para disminuir cantidad del producto 
+
+    document.querySelectorAll(".decrease-quantity").forEach(button  => {
+        button.addEventListener("click", ()  => {
+             const idboton = parseInt(button.getAttribute("data-id"));
+            carritoDeCompra = carritoDeCompra.map(producto => {
+                if (producto.id === idboton && producto.cantidad > 1) {
+                    return {
+                        ...producto,
+                        cantidad: producto.cantidad - 1
+                    };
+                }
+                return producto;
+            })
+            actualizarCarrito();
+        })
+    })
+
+    //funcion para eliminar producto en el carrito
+     document.querySelectorAll(".remove-item").forEach(button  => {
+        button.addEventListener("click", ()  => {
+             const idboton = parseInt(button.getAttribute("data-id"));
+             carritoDeCompra = carritoDeCompra.filter(producto => {
+                return producto.id !== idboton;
+             })
+             actualizarCarrito();
+        })
+     })
+    }
 
 
-  
     //funcion para mostrar los productos
     productos.forEach(producto => {
         const crearDiv = document.createElement("div");
@@ -73,8 +116,6 @@ document.addEventListener("DOMContentLoaded", () => {
         mostrarProductos.appendChild(crearDiv);
     });
 
-
-    
     //funcion para agregar productos al carrito
     document.querySelectorAll(".add-to-cart").forEach(boton => {
         boton.addEventListener("click", (e) => {
@@ -82,9 +123,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const productoImage = e.target.getAttribute("data-image");
             const productoNombre = e.target.getAttribute("data-nombre");
             const productoPrecio = parseFloat(e.target.getAttribute("data-precio"));
-
             const productoExistente = carritoDeCompra.find(item => item.id === productoId);
-
             if (productoExistente) {
                 productoExistente.cantidad++;
             } else {
@@ -106,4 +145,5 @@ document.addEventListener("DOMContentLoaded", () => {
       carritoIcon.addEventListener("click", () => {
         carritoDropdown.classList.toggle("hidden")
       })
+
 });
