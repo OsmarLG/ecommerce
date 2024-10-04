@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const contadorCarrito = document.getElementById("cart-counter")
     const carritoDropdown = document.getElementById("cart-dropdown")
     const carritoIcon = document.querySelector(".cart-icon-container")
-    
+  
  
     let carritoDeCompra = [];
 
@@ -45,6 +45,8 @@ document.addEventListener("DOMContentLoaded", () => {
         configurarEventos();
     };
 
+
+ 
 //funcion para los botones 
     const configurarEventos = () => {
         document.querySelectorAll(".increase-quantity").forEach(button => {
@@ -145,5 +147,36 @@ document.addEventListener("DOMContentLoaded", () => {
       carritoIcon.addEventListener("click", () => {
         carritoDropdown.classList.toggle("hidden")
       })
+
+    // Seleccionamos el botón de WhatsApp en el HTML
+     // Seleccionamos el botón de WhatsApp en el HTML
+const whatsappBtn = document.getElementById("whatsappBtn");
+
+// Añadimos un evento de clic al botón y una función de flecha
+whatsappBtn.addEventListener("click", () => {
+    // Definimos una variable para construir el mensaje
+    let mensaje = "Hola, quiero comprar los siguientes productos:\n\n";
+    
+    // Recorremos cada producto en el carrito utilizando for eahc que toma un parámetro 
+    carritoDeCompra.forEach(producto => {
+        // Añadimos el nombre, cantidad y precio al mensaje
+        mensaje += `${producto.nombre} 
+        - Cantidad: ${producto.cantidad} 
+        - Precio: $${(producto.precio * producto.cantidad)
+            .toFixed(2)}\n`;
+    });
+    
+    // Añadimos el total del carrito al mensaje
+    mensaje += `\nTotal: 
+    $${mostrarTotalDelProducto.textContent}`;
+    
+    // Creamos una URL con el número de teléfono y el mensaje, codificando
+    const url = `
+    https://api.whatsapp.com/send?phone=50245984577&text=${encodeURIComponent(mensaje)}`;
+    
+    // Abrimos una nueva ventana con la URL de WhatsApp
+    window.open(url, '_blank');
+});
+
 
 });

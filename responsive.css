@@ -16,7 +16,7 @@
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 776px) {
 
     nav ul  {
         display: none;
@@ -40,6 +40,15 @@
     #home .btn-home {
         padding: 10px 25px;
         font-size: 0.8rem;
+    }
+
+    #features .products .cost {
+        right: 20px;
+        bottom: 200px;
+    }
+    #cart-dropdown {
+        top: 60px;
+        right: 0;
     }
 }
 
@@ -68,5 +77,11 @@
     #home .btn-home {
         padding: 8px 20px;
         font-size: 0.75rem;
+    }
+
+    
+    #features .products .cost {
+ 
+        bottom: 100px;
     }
 }

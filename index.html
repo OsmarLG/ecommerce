@@ -7,12 +7,12 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
     <link rel="stylesheet" href="estilo.css">
     <link rel="stylesheet" href="responsive.css">
-    <script src="data.js"></script>
     <script src="script.js"></script>
+    <script src="data.js"></script>
 </head>
 <body>
     <nav> 
-        <img src="https://img.freepik.com/vector-gratis/plantilla-logotipo-tienda-ropa-dibujada-mano_23-2149511674.jpg" alt="">
+        <img src="/images/logo.png" alt="">
         <ul>
             <li><a href="#">Comercio</a></li>
             <li><a href="#">Catálogo</a></li>
@@ -23,9 +23,9 @@
                 <i class="fas fa-shopping-cart"></i>
                 <span id="cart-counter">0</span>
             </div>
-            
 
-
+           
+        
     </nav>
 
     <div class="hidden" id="cart-dropdown">
@@ -34,55 +34,61 @@
         </div>
         <hr>
 
-        <dir id="cart">
+        <div id="cart">
             <div class="cart-item">
-
+                <div class="info">
+                    <p></p>
+                    <div>
+                        <button>-</button>
+                        <span>0</span>
+                        <button>+</button>
+                    </div>
+                    <p></p>
+                    <button><i class="fas fa-trash-alt"></i></button>
+                </div>
             </div>
 
-        </dir>
-
+            
+        </div>
+ 
+        <button id="whatsappBtn" class="whatsapp-button">Pedir por WhatsApp</button>
     </div>
 
 
 
 
     <section id="home">
-        <h1>Elegancia y Estilo</h1>
-        <p>Encuentra trajes exclusivos para hombres y mujeres que destacan por su elegancia y estilo.
-            Descubre nuestra colección y luce impecable en cualequier ocasión.
-        </p>
-
+        <h1>Tecnología de Vanguardia</h1>
+        <p>Encuentra los últimos modelos de celulares, audífonos y más. Descubre nuestra colección y mantente conectado con estilo y funcionalidad.</p>
+    
         <button class="btn-home">Comprar Ahora</button>
-
     </section>
 
-    <section id="characteristic">
+    <section id="characteristic " class="characteristic "  >
         <div class="fea-base">
             <div class="fea-box">
-                <i class="fas fa-tshirt"></i>
-                <h3>Variedad de Estilos</h3>
-                <p>Encuentra una amplia gama de estilos que se adaptan a cada ocasión y personalidad.</p>
+                <i class="fas fa-mobile-alt"></i>
+                <h3>Variedad de Dispositivos</h3>
+                <p>Encuentra una amplia gama de dispositivos tecnológicos que se adaptan a cada necesidad y preferencia.</p>
             </div>
-
+    
             <div class="fea-box">
-                <i class="fas fa-cut"></i>
-                <h3>Hecho a la medida</h3>
-                <p>
-                    Disfruta de trajes personalizados con ajuste perfecto y detalles impacables
-                </p>
+                <i class="fas fa-headphones-alt"></i>
+                <h3>Sonido de Alta Calidad</h3>
+                <p>Disfruta de audífonos con sonido envolvente y detalles impecables.</p>
             </div>
-
+    
             <div class="fea-box">
-                <i class="fas fa-star"></i>
-                <h3>Calidad Premium</h3>
-                <p>Experimenta la excelencia en cada prenda, con materiales de la más alta calidad</p>
+                <i class="fas fa-cogs"></i>
+                <h3>Innovación y Tecnología</h3>
+                <p>Experimenta la excelencia con productos de última generación y tecnología avanzada.</p>
             </div>
         </div>
     </section>
 
-    <section id="features">
+    <section id="features" class="features print-section">
         <h2>Productos Destacados</h2>
-        <p>Descubre nuestra selección de trajes y moda que destacan por su estilo y calidad expcecionales</p>
+        <p>Descubre nuestra selección de dispositivos tecnológicos que destacan por su innovación y calidad excepcionales.</p>
         
         <div class="products-box" id="products-box">
             
@@ -95,8 +101,8 @@
         <section id="offer">
             <div class="offer-text">
                 <h2>Ofertas Especiales</h2>
-                <p>Aprovecha nuestras ofertas especiales en trajes exclusivos y luce impecables en cualquier momento</p>
-                <button class="btn-offer"> Comprar Ahora</button>
+                <p>Aprovecha nuestras ofertas especiales en dispositivos tecnológicos y mantente a la vanguardia en todo momento.</p>
+                <button class="btn-offer">Comprar Ahora</button>
             </div>
 
             <div class="offer-image">
@@ -139,40 +145,36 @@
             <div class="footer-col">
                 <h3>Productos Destacados</h3>
                 <ul>
-                    <li>Vestimenta para Hombres</li>
-                    <li>Vestimenta para Mujeres</li>
-                    <li>Accesorios de Moda</li>
-                    <li>Ropa Deportiva</li>
+                    <li>Celulares</li>
+                    <li>Audífonos</li>
+                    <li>Accesorios Tecnológicos</li>
+                    <li>Dispositivos Inteligentes</li>
                 </ul>
-                
             </div>
-
+        
             <div class="footer-col">
-                <h3>Productos Destacados</h3>
+                <h3>Productos Populares</h3>
                 <ul>
-                    <li>Vestimenta para Hombres</li>
-                    <li>Vestimenta para Mujeres</li>
-                    <li>Accesorios de Moda</li>
-                    <li>Ropa Deportiva</li>
+                    <li>Celulares</li>
+                    <li>Audífonos</li>
+                    <li>Accesorios Tecnológicos</li>
+                    <li>Dispositivos Inteligentes</li>
                 </ul>
-                
             </div>
+        
             <div class="footer-col">
-                <h3>Productos Destacados</h3>
+                <h3>Últimas Novedades</h3>
                 <ul>
-                    <li>Vestimenta para Hombres</li>
-                    <li>Vestimenta para Mujeres</li>
-                    <li>Accesorios de Moda</li>
-                    <li>Ropa Deportiva</li>
+                    <li>Celulares</li>
+                    <li>Audífonos</li>
+                    <li>Accesorios Tecnológicos</li>
+                    <li>Dispositivos Inteligentes</li>
                 </ul>
-                
             </div>
-
+        
             <div class="copyright">
-                <p>Copyright 2024 Todos los derechos reservados, esta página fue creado por Edukuk</p>
+                <p>Copyright 2024 Todos los derechos reservados, esta página fue creada por Edukuk</p>
             </div>
-
-
         </section>
 
 </body>
