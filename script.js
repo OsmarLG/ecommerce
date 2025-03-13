@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const contadorCarrito = document.getElementById("cart-counter")
     const carritoDropdown = document.getElementById("cart-dropdown")
     const carritoIcon = document.querySelector(".cart-icon-container")
+    const closeCartBtn = document.getElementById("close-cart");
   
  
     let carritoDeCompra = [];
@@ -148,6 +149,9 @@ document.addEventListener("DOMContentLoaded", () => {
         carritoDropdown.classList.toggle("hidden")
       })
 
+      closeCartBtn.addEventListener("click", () => {
+        carritoDropdown.classList.add("hidden");
+    });
     // Seleccionamos el botón de WhatsApp en el HTML
      // Seleccionamos el botón de WhatsApp en el HTML
 const whatsappBtn = document.getElementById("whatsappBtn");
