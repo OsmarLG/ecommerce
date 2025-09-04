@@ -1,68 +1,69 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ecommerce</title>
+    <title>TecnoShop - Tecnología de Vanguardia</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
     <link rel="stylesheet" href="estilo.css">
-    <link rel="stylesheet" href="responsive.css">
-    <script src="script.js"></script>
-    <script src="data.js"></script>
 </head>
 <body>
+    <div class="overlay" id="overlay"></div>
+    
     <nav> 
-        <img src="/images/logo.png" alt="">
+        <img src="/images/logo.png" alt="Logo TecnoShop">
         <ul>
             <li><a href="#">Comercio</a></li>
             <li><a href="#">Catálogo</a></li>
             <li><a href="#">Contacto</a></li>
         </ul>
 
-            <div class="cart-icon-container">
-                <i class="fas fa-shopping-cart"></i>
-                <span id="cart-counter">0</span>
-            </div>
-
-           
-        
-    </nav>
-    <div class="hidden" id="cart-dropdown">
-        <button id="close-cart" class="close-btn">
-            <i class="fas fa-times"></i>
-        </button>
-        <div id="cart-total">
-            <p>Total: $ <span id="total-amount">0.00</span></p>
+        <div class="cart-icon-container" id="cart-icon">
+            <i class="fas fa-shopping-cart"></i>
+            <span id="cart-counter">0</span>
         </div>
-        <hr>
+    </nav>
+    
+    <div id="cart-dropdown">
+        <div class="cart-header">
+            <h3>Tu Carrito</h3>
+            <button id="close-cart" class="close-btn">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        
         <div id="cart">
             <div class="cart-item">
+                <img src="" alt="Producto">
                 <div class="info">
-                    <p></p>
+                    <p>Nombre del producto</p>
                     <div>
-                        <button>-</button>
+                        <button class="decrease-quantity">-</button>
                         <span>0</span>
-                        <button>+</button>
+                        <button class="increase-quantity">+</button>
                     </div>
-                    <p></p>
-                    <button><i class="fas fa-trash-alt"></i></button>
+                    <p>$<span class="item-total">0.00</span></p>
+                    <button class="remove-btn"><i class="fas fa-trash-alt"></i></button>
                 </div>
             </div>
         </div>
-        <button id="whatsappBtn" class="whatsapp-button">Pedir por WhatsApp</button>
+        
+        <div id="cart-total">
+            <p>Total: $<span id="total-amount">0.00</span></p>
+        </div>
+        
+        <button id="whatsappBtn" class="whatsapp-button">
+            <i class="fab fa-whatsapp"></i> Pedir por WhatsApp
+        </button>
     </div>
-    
-
-
 
     <section id="home">
         <h1>Tecnología de Vanguardia</h1>
         <p>Encuentra los últimos modelos de celulares, audífonos y más. Descubre nuestra colección y mantente conectado con estilo y funcionalidad.</p>
-    
         <button class="btn-home">Comprar Ahora</button>
     </section>
 
-    <section id="characteristic " class="characteristic "  >
+    <section class="characteristic">
         <div class="fea-base">
             <div class="fea-box">
                 <i class="fas fa-mobile-alt"></i>
@@ -84,96 +85,91 @@
         </div>
     </section>
 
-    <section id="features" class="features print-section">
+    <section class="features">
         <h2>Productos Destacados</h2>
         <p>Descubre nuestra selección de dispositivos tecnológicos que destacan por su innovación y calidad excepcionales.</p>
         
         <div class="products-box" id="products-box">
-            
-        </div>
-    </div>
-
+            <!-- Los productos se cargarán aquí mediante JavaScript -->
         </div>
     </section>
 
-        <section id="offer">
-            <div class="offer-text">
-                <h2>Ofertas Especiales</h2>
-                <p>Aprovecha nuestras ofertas especiales en dispositivos tecnológicos y mantente a la vanguardia en todo momento.</p>
-                <button class="btn-offer">Comprar Ahora</button>
+    <section id="offer">
+        <div class="offer-text">
+            <h2>Ofertas Especiales</h2>
+            <p>Aprovecha nuestras ofertas especiales en dispositivos tecnológicos y mantente a la vanguardia en todo momento.</p>
+            <button class="btn-offer">Comprar Ahora</button>
+        </div>
+
+        <div class="offer-image">
+            <img src="/images/o.jpg" alt="Oferta especial">
+        </div>
+    </section>
+
+    <section id="customers">
+        <h2>Clientes Satisfechos</h2>
+        <div class="custom-box">
+            <div class="profile">
+                <div class="image-container">
+                    <img src="/images/c1.jpg" alt="Cliente Sofia">
+                </div>
+                <h6>Sofia</h6>
+                <p>Excelente servicio y productos de alta calidad. Definitivamente recomiendo esta tienda.</p>
             </div>
 
-            <div class="offer-image">
-                <img src="/images/o.jpg" alt="oferta">
+            <div class="profile">
+                <div class="image-container">
+                    <img src="/images/c2.jpg" alt="Cliente Arnold">
+                </div>
+                <h6>Arnold</h6>
+                <p>La entrega fue rápida y el producto superó mis expectativas. Volveré a comprar.</p>
             </div>
 
-        </section>
-
-        <section id="customers">
-            <h2>Clientes Satisfechos</h2>
-            <div class="custom-box">
-                <div class="profile">
-                    <div class="image-container">
-                        <img src="/images/c1.jpg" alt="">
-                    </div>
-                    <h6>Sofia</h6>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, debitis?</p>
+            <div class="profile">
+                <div class="image-container">
+                    <img src="/images/c3.jpg" alt="Cliente Doris">
                 </div>
-
-                <div class="profile">
-                    <div class="image-container">
-                        <img src="/images/c2.jpg" alt="">
-                    </div>
-                    <h6>Arnold</h6>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, debitis?</p>
-                </div>
-
-                <div class="profile">
-                    <div class="image-container">
-                        <img src="/images/c3.jpg" alt="">
-                    </div>
-                    <h6>Doris</h6>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, debitis?</p>
-                </div>
+                <h6>Doris</h6>
+                <p>Encontré exactamente lo que buscaba a un precio increíble. Muy satisfecha con mi compra.</p>
             </div>
+        </div>
+    </section>
 
-        </section>
+    <section id="footer">
+        <div class="footer-col">
+            <h3>Productos Destacados</h3>
+            <ul>
+                <li>Celulares</li>
+                <li>Audífonos</li>
+                <li>Accesorios Tecnológicos</li>
+                <li>Dispositivos Inteligentes</li>
+            </ul>
+        </div>
     
-        <section id="footer">
-            <div class="footer-col">
-                <h3>Productos Destacados</h3>
-                <ul>
-                    <li>Celulares</li>
-                    <li>Audífonos</li>
-                    <li>Accesorios Tecnológicos</li>
-                    <li>Dispositivos Inteligentes</li>
-                </ul>
-            </div>
-        
-            <div class="footer-col">
-                <h3>Productos Populares</h3>
-                <ul>
-                    <li>Celulares</li>
-                    <li>Audífonos</li>
-                    <li>Accesorios Tecnológicos</li>
-                    <li>Dispositivos Inteligentes</li>
-                </ul>
-            </div>
-        
-            <div class="footer-col">
-                <h3>Últimas Novedades</h3>
-                <ul>
-                    <li>Celulares</li>
-                    <li>Audífonos</li>
-                    <li>Accesorios Tecnológicos</li>
-                    <li>Dispositivos Inteligentes</li>
-                </ul>
-            </div>
-        
-            <div class="copyright">
-                <p>Copyright 2025 Todos los derechos reservados, esta página fue creada por Edukuk</p>
-            </div>
-        </section>
-
+        <div class="footer-col">
+            <h3>Productos Populares</h3>
+            <ul>
+                <li>Celulares</li>
+                <li>Audífonos</li>
+                <li>Accesorios Tecnológicos</li>
+                <li>Dispositivos Inteligentes</li>
+            </ul>
+        </div>
+    
+        <div class="footer-col">
+            <h3>Últimas Novedades</h3>
+            <ul>
+                <li>Celulares</li>
+                <li>Audífonos</li>
+                <li>Accesorios Tecnológicos</li>
+                <li>Dispositivos Inteligentes</li>
+            </ul>
+        </div>
+    
+        <div class="copyright">
+            <p>Copyright 2025 Todos los derechos reservados, esta página fue creada por Edukuk</p>
+        </div>
+    </section>
+<script src="script.js"></script>
 </body>
 </html>
