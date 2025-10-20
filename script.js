@@ -239,7 +239,7 @@
                 
                 mensaje += `\nTotal: $${mostrarTotalDelProducto.textContent}`;
                 
-                const url = `https://api.whatsapp.com/send?phone=50245984577&text=${encodeURIComponent(mensaje)}`;
+                const url = `https://api.whatsapp.com/send?phone=526151559659&text=${encodeURIComponent(mensaje)}`;
                 
                 window.open(url, '_blank');
             });
